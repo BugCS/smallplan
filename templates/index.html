@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>欢迎XX</title>
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    {% load staticfiles %}
+
+    <link rel="stylesheet" href="{% static 'assets/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <script src="/static/assets/js/jquery-1.11.0.min.js"></script>
+    <script src="/static/assets/js/animatext.js"></script>
+    <script type="text/javascript" src="/static/assets/js/canvas-particle.js"></script>
+</head>
+<body>
+
+<div class="teamtitle">
+        <p class="line4">团队TITLE</p>
+</div>
+<div class="linktitle">
+    <span>&mdash;</span>
+        <a>商务合作</a>
+        <a>反馈</a>
+        <a>博客</a>
+        <a>论坛</a>
+   <span>&mdash;</span>
+</div>
+
+
+<div class="teamcontent">
+    <div class="menu wrap">
+        <span class="menu_title ribbon6">关于我们</span>
+         <div>
+           <div style="width:1px;height:10px;display: inline-flex;margin: 10px;color: aqua;">精益求精</div>
+           <div style="width:1px;height:10px;display: inline-flex;margin: 10px;color: aqua;">效率质量</div>
+           <div style="width:1px;height:10px;display: inline-flex;margin: 10px;color: aqua;">效率质量</div>
+        </div>
+        <div class="menu_fields__more">
+            <input id="" value="更多" type="button">
+        </div>
+    </div>
+
+    <div class="menu wrap">
+        <span class="menu_title ribbon6">团队成员</span>
+       <div>
+            <p class="des_content" style="text-indent:25px;line-height: unset;color: aqua;">
+                团队成员均有多年黑盒测试经验，并且均独立针对对应的产品开发设计过脚本。
+            </p>
+        </div>
+        <div class="menu_fields__more">
+            <input id="" value="更多" type="button">
+        </div>
+
+    </div>
+
+    <div class="menu wrap">
+        <span class="menu_title ribbon6">开放模板</span>
+        <div style="text-align: left;">
+            <li><a class="des_content" style="cursor: pointer;text-decoration: underline;">用例模板</a></li>
+            <li><a class="des_content" style="cursor: pointer;text-decoration: underline;">报告模板</a></li>
+            <li><a class="des_content" style="cursor: pointer;text-decoration: underline;">测试计划书</a></li>
+            <li><a class="des_content" style="cursor: pointer;text-decoration: underline;">编码规范</a></li>
+        </div>
+        <div class="menu_fields__more">
+            <input id="" value="更多" type="button">
+        </div>
+    </div>
+
+    <div class="menu wrap">
+        <span class="menu_title ribbon6">开放源码</span>
+        <div style="text-align: left;">
+            <li><a class="des_content" style="cursor: pointer;text-decoration: underline;">shell性能脚本</a></li>
+            <li><a class="des_content" style="cursor: pointer;text-decoration: underline;">python读取配置</a></li>
+        </div>
+        <div class="menu_fields__more">
+            <input id=""  value="更多" type="button">
+        </div>
+    </div>
+    <div class="menu wrap">
+        <span class="menu_title ribbon6">开放框架</span>
+        <div style="text-align: left;">
+            <li><a class="des_content" style="cursor: pointer;text-decoration: underline;">接口自动化框架</a></li>
+            <li><a class="des_content" style="cursor: pointer;text-decoration: underline;">性能自动化框架</a></li>
+        </div>
+        <div class="menu_fields__more">
+            <input id=""  value="更多" type="button">
+        </div>
+    </div>
+
+</div>
+<footer class="SignFlowHomepage-footer">
+
+    <div class="ZhihuRights">
+        <span>© 2018 xx测试团队</span>
+        <input class="loginbtn" type="button" value="登录">
+        <input class="loginbtn" type="button" value="注册">
+    </div>
+
+</div></footer>
+<!-- 背景div -->
+<div id="mydiv" style="height:500px;"></div>
+<script type="text/javascript">
+window.onload = function(){
+    //配置
+     //$(".des_content").animatext();
+    var config = {
+        vx: 4,//点x轴速度,正为右，负为左
+        vy:  4,//点y轴速度
+        height: 2,//点高宽，其实为正方形，所以不宜太大
+        width: 2,
+        count: 100,//点个数
+        color: "121, 162, 185",//点颜色
+        stroke: "130,255,255",//线条颜色
+        dist: 6000,//点吸附距离
+        e_dist: 20000,//鼠标吸附加速距离
+        max_conn: 10//点到点最大连接数
+    }
+    //调用
+    CanvasParticle(config);
+}
+</script>
+</body>
+</html>
