@@ -1912,7 +1912,8 @@ header .navbar.navbar-default .form-group {
 	display:block
 }
 header .navbar.navbar-default .navbar-brand {
-	color:#FFF;
+	/*color:#FFF;*/
+	color: #fcb03b;
 	height:40px;
 	line-height:0;
 	margin-bottom:15px;
@@ -1990,7 +1991,8 @@ header .navbar.navbar-default .navbar-form .form-control:focus {
 	transition-property:background,color
 }
 header .navbar.navbar-default .navbar-right>li>a {
-	color:#eee
+	/*color:#eee*/
+	color: #fcb03b;
 }
 header .navbar.navbar-default .navbar-right>li>a:hover {
 	color:#fff
