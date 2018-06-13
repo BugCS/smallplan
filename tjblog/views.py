@@ -15,3 +15,20 @@ def index(request):
         :return:
     """
     return render_to_response("index.html")
+
+
+def blog(request):
+    """
+        主创博客
+        :param request:
+        :return:
+    """
+    return render_to_response("blog.html")
+
+def Teammembers(request):
+    """
+        主创成员介绍
+        :param request:
+        :return:
+    """
+    return render_to_response("Teammembers.html")

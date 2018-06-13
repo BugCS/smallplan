@@ -148,6 +148,9 @@ body .menu
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(53, 57, 74, 0)', endColorstr='rgb(0, 0, 0)',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
 }
+body .menu:hover{
+     box-shadow: none;
+}
 body .menu_title {
   color: #D3D7F7;
   /*height: 60px;
