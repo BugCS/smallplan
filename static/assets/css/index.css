@@ -11,7 +11,7 @@ body
 	font-family: 'Source Sans Pro';
 	background-size: 100%;
 	background-image: url(../img/bj.jpg);
-	background:#666;
+	/*background:#666;*/
 	text-align:center;
 	font: 400 1em/1.5 "Neuton";
 }
