@@ -3865,4 +3865,20 @@ header .navbar.navbar-default .navbar-right>li>a {
    background-image:url('../img/teammembers/pyy.jpg');
    animation-name: fadeInDown;
    background-size: 200px;
+   border: 10px solid #fff;
+
+    box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.9);
+    -webkit-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.9);
+}
+#logobj:hover{
+
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
 }
