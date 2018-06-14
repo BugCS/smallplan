@@ -12,6 +12,8 @@ body {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #8E6B59;
+	font: 500 .875em PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans;
+    background-color: #07040e;
 }
 
 h1, h2, h3 {
@@ -39,7 +41,7 @@ ul, ol { }
 
 blockquote { }
 
-a { color: #D53707; }
+a { /*color: #D53707;*/ color: #8E6B59;}
 
 a:hover { text-decoration: none; }
 
@@ -75,7 +77,10 @@ hr { display: none; }
 	margin: 0 auto;
 	padding: 0 20px;
 	background: #FDF18D;
-	border-bottom: 8px solid #623022;
+	/*border-bottom: 8px solid #623022;*/
+	border: 0px solid #fff;
+    border-bottom-width: 2px;
+    background-color: #07040e;
 }
 
 /* Menu */
@@ -105,7 +110,8 @@ hr { display: none; }
 	padding: 5px 12px;
 	text-decoration: none;
 	font: 14px Georgia, "Times New Roman", Times, serif;
-	color: #BF2C2C;
+	/*color: #BF2C2C;*/
+	color: #F1BA05;
 }
 
 #menu a:hover { 
@@ -115,7 +121,8 @@ hr { display: none; }
  }
 
 #menu .current_page_item a {
-	background: #910000;
+	/*background: #910000;*/
+	background: #E46115;
 	color: #FFFFFF;
 }
 
@@ -164,22 +171,26 @@ hr { display: none; }
 #page {
 	margin: 0 auto;
 	padding: 0 40px;
+	margin-top: 80px;
 }
 
 /** LOGO */
 
 #logo {
-	height: 148px;
+	/*height: 148px;
+	margin-left: 12px;*/
+	float: right;
+    height: 40px;
 }
-
+/*
 #logo h1, #logo p {
-	float: left;
+	float: right;
 	margin: 0;
 	padding: 0;
 	line-height: normal;
 }
 
-#logo h1 { padding-top: 45px;}
+#logo h1 { padding: 5px 12px;}
 
 #logo h1 a {
 	padding: 5px 0 5px 10px;
@@ -201,7 +212,7 @@ hr { display: none; }
 }
 
 #logo p a:hover { text-decoration: underline; }
-
+*/
 /* Content */
 
 #content {
@@ -212,7 +223,12 @@ hr { display: none; }
 /* Post */
 
 .post {
+	/*margin-bottom: 25px;*/
 	margin-bottom: 25px;
+    background: #3bb1dc;
+    border: 2px solid #fff;
+    box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.9);
+    padding: 10px;
 }
 
 .post .title {
@@ -251,6 +267,9 @@ hr { display: none; }
 #sidebar {
 	float: left;
 	width: 20%;
+	border: 0px solid #fff;
+    border-right-width: 2px;
+    padding-right: 15px;
 }
 
 #sidebar ul {
