@@ -3882,3 +3882,15 @@ header .navbar.navbar-default .navbar-right>li>a {
     -ms-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
 }
+.loginbtn{
+    background: #07040e;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fcb03b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 23px;
+}
