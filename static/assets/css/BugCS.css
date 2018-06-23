@@ -2362,7 +2362,7 @@ html #wpadminbar {
 	margin-left:30px
 }
 .login {
-	background:url(../Images/bg-login.jpg) 50% 0 repeat-x #080808!important;
+	/*background:url(../Images/bg-login.jpg) 50% 0 repeat-x #080808!important;*/
 	background-size:auto!important;
 	color:#fff;
 	height:100%
@@ -3894,3 +3894,4 @@ header .navbar.navbar-default .navbar-right>li>a {
     cursor: pointer;
     margin-top: 23px;
 }
+

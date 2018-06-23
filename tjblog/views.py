@@ -16,6 +16,13 @@ def index(request):
     """
     return render_to_response("index.html")
 
+def login(request):
+    """
+        登录注册
+        :param request:
+        :return:
+    """
+    return render_to_response("login.html")
 
 def blog(request):
     """

@@ -115,9 +115,11 @@ hr { display: none; }
 }
 
 #menu a:hover { 
-	text-decoration: underline;
+	/*text-decoration: underline;
 	background: #BF2C2C;
-
+	border: 2px solid white;*/
+    color: white;
+    background: #E46115;
  }
 
 #menu .current_page_item a {

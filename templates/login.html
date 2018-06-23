@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录注册</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'assets/css/common.css' %}" type="text/css" media="all">
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li ><a href="/api/index">首页</a></li>
+				<li ><a href="/api/blog">博客</a></li>
+				<li><a href="#">关于</a></li>
+				<li><a href="#">联系</a></li>
+				<li><a href="#">下载用例模板</a></li>
+				<li><a href="#">下载脚本</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<!--<div id="search">
+			<form method="get" action="">
+				<fieldset>
+				<input type="text" name="s" id="search-text" size="15" />
+				<input type="submit" id="search-submit" value="Search" />
+				</fieldset>
+			</form>
+		</div>-->
+		<!-- end #search -->
+		<div id="logo">
+		<h1><a href="#">BugCS</a></h1>
+		<p>by <a href="http://www.freecsstemplates.org/">主创团队记录</a></p>
+	</div>
+
+	</div>
+	<!-- end #header -->
+    <div class="form-w3ls">
+    <ul class="tab-group cl-effect-4">
+        <li class="tab active"><a href="#signin-agile">登录</a></li>
+		<li class="tab"><a href="#signup-agile">注册</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="signin-agile">
+			<form action="#" method="post">
+
+				<p class="header">User Name</p>
+				<input type="text" name="user" value="User Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
+
+				<p class="header">Password</p>
+				<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+
+				<input type="checkbox" id="brand" value="">
+				<label for="brand"><span></span> Remember me?</label>
+
+				<input type="submit" class="sign-in" value="Sign In">
+
+			</form>
+		</div>
+		<div id="signup-agile">
+			<form action="#" method="post">
+
+				<p class="header">User Name</p>
+				<input type="text" name="user" value="Your Full Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Full Name';}">
+
+				<p class="header">Phone</p>
+				<input type="tel" name="phone" value="Your Phone Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Phone Number';}">
+
+				<p class="header">Email Address</p>
+				<input type="email" name="email" value="Email@address.com" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email@address.com';}">
+
+				<p class="header">Password</p>
+				<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+
+				<p class="header">Confirm Password</p>
+				<input type="password" name="password" value="Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Confirm Password';}">
+
+				<input type="submit" class="register" value="Register">
+			</form>
+		</div>
+    </div><!-- tab-content -->
+</div>
+</div>
+<script type="text/javascript" src="/static/assets/js/jquery-1.11.0.min.js"></script>
+<script>
+    $('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+  var $this = $(this),
+      label = $this.prev('label');
+
+	  if (e.type === 'keyup') {
+			if ($this.val() === '') {
+          label.removeClass('active highlight');
+        } else {
+          label.addClass('active highlight');
+        }
+    } else if (e.type === 'blur') {
+    	if( $this.val() === '' ) {
+    		label.removeClass('active highlight');
+			} else {
+		    label.removeClass('highlight');
+			}
+    } else if (e.type === 'focus') {
+
+      if( $this.val() === '' ) {
+    		label.removeClass('highlight');
+			}
+      else if( $this.val() !== '' ) {
+		    label.addClass('highlight');
+			}
+    }
+
+});
+
+$('.tab a,.links a').on('click', function (e) {
+
+  e.preventDefault();
+
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+
+  $(target).fadeIn(600);
+
+});
+</script>
+</body>
+</html>

@@ -9,6 +9,8 @@
   <link rel="shortcut icon" href="favicon.ico">
 
   <link rel="stylesheet" id="patternfly-adjusted-css" href="{% static 'assets/css/BugCS.css' %}" type="text/css" media="all">
+  <link rel="stylesheet" href="{% static 'assets/css/login.css' %}" type="text/css" media="all">
+  <link rel="stylesheet" href="{% static 'assets/css/animate-custom.css' %}" type="text/css" media="all">
 
   <script type="text/javascript" src="/static/assets/js/jquery-1.11.0.min.js"></script>
 
@@ -58,11 +60,11 @@
             <span class="icon-bar">
             </span>
           </button>
-         <!-- <a class="navbar-brand" id="logo" title="BUG-CAPTURE-STUDIO" href="">
-          登录    注册
-          </a>-->
-          <input type="button" value="登录" class="loginbtn"/>
-         <input type="button" value="注册" class="loginbtn"/>
+          <a class="navbar-brand" id="logo" title="BUG-CAPTURE-STUDIO" href="/api/login">
+          登录/注册
+          </a>
+          <!--<input type="button" value="登录" class="loginbtn" onclick="$('.loginresiger').show();$('.zhezhao').show()"/>
+          <input type="button" value="注册" class="loginbtn"/>-->
         </div>
         <!-- end .navbar-header -->
         <div class="navbar-collapse collapse">
@@ -614,8 +616,6 @@
         })(window);
 
     </script>
-
-
 
 </body>
 </html>
