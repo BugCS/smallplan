@@ -518,3 +518,7 @@ p.copyright {
 }
 }
 /************end login**************/
+.SignFlowHomepage-footer{
+    text-align: center;
+    bottom:0;
+}

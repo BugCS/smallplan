@@ -1,0 +1,117 @@
+.members{
+    margin:0;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.member{
+    margin:auto;
+    /*border:1px solid #fff;*/
+    width:900px;
+    top:0;
+    left:0;
+    height: 300px;
+    background:#fff;
+    border-radius: 20px;
+    line-height: 200px;
+    margin-top:20px;
+    display: block;
+    position: relative;
+}
+.member>.headportrait{
+    display: inline-block;
+    background: #ff;
+    background-color:#F1BA05;
+    width: 20%;
+    border-right: 5px solid #F1BA05;
+    height: 300px;
+    background-size:200px 300px;
+    background-repeat:no-repeat;
+
+}
+.member>.introduce{
+    display: inline-block;
+    height: 200px;
+    width: 80%;
+    position: absolute;
+}
+.introduce >.speciality{
+    position: absolute;
+    text-align: left;
+    height:50px;
+    width:90%;
+    border-bottom: 2px solid #F1BA05;
+    display: block;
+}
+.speciality>p{
+    line-height:50px;
+}
+p>a{
+    font-size:20px;
+}
+p>span{
+    font-size:12px;
+}
+.introduce>.skill{
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: 5px;
+}
+.skillname
+{
+    display: block;
+    line-height: 20px;
+    position: relative;
+    width: 95%;
+    /*margin-top: 20px;*/
+}
+.skillbar{
+    width: 700px;
+    position: absolute;
+    display: inline-block;
+    margin-left: 50px;
+}
+/*progress bar*/
+.progress_bar .pro-bar {
+    background: hsl(0, 0%, 97%);
+   /* box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.1) inset;*/
+    height:4px;
+    margin-bottom: 12px;
+    margin-top: 10px;
+    position: relative;
+}
+.progress_bar  .progress_bar_title{
+    color: hsl(218, 4%, 50%);
+    font-size: 12px;
+    font-weight: 100;
+    position: relative;
+    /*top: -28px;*/
+    z-index: 1;
+}
+.progress_bar .progress_number{
+    float: right;
+    margin-top: -24px;
+}
+.progress_bar .progress-bar-inner:before {
+    content: "";
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    right: 1px;
+    top: 0;
+    z-index: 1;
+}
+.progress_bar .progress-bar-inner:after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: inherit;
+    border-radius: 50%;
+    position: absolute;
+    right: -4px;
+    top: -5px;
+}
