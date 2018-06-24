@@ -39,3 +39,11 @@ def Teammembers(request):
         :return:
     """
     return render_to_response("Teammembers.html")
+
+def download(request):
+    """
+        下载
+        :param request:
+        :return:
+    """
+    return render_to_response("download.html")

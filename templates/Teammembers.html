@@ -42,8 +42,7 @@
 				<li class="current_page_item"><a href="/api/Teammembers">团队成员</a></li>
 				<li><a href="#">关于</a></li>
 				<li><a href="#">联系</a></li>
-				<li><a href="#">下载用例模板</a></li>
-				<li><a href="#">下载脚本</a></li>
+				<li><a href="/api/download">下载文档脚本</a></li>
 			</ul>
 		</div>
 		<div id="logo">
@@ -263,27 +262,8 @@
 
 
 <script src="/static/assets/js/jquery.min.js" type="text/javascript"></script>
-<script src="/static/assets/js/jquery.material-cards.min.js"></script>
 <script>
-	$(function() {
-		$('.material-card').materialCard({
-			icon_close: 'fa-chevron-left',
-			icon_open: 'fa-thumbs-o-up',
-			icon_spin: 'fa-spin-fast',
-			card_activator: 'click'
-		});
 
-//        $('.active-with-click .material-card').materialCard();
-
-		window.setTimeout(function() {
-			$('.material-card:eq(1)').materialCard('open');
-		}, 2000);
-
-		$('.material-card').on('shown.material-card show.material-card hide.material-card hidden.material-card', function (event) {
-			console.log(event.type, event.namespace, $(this));
-		});
-
-	});
 </script>
 
 <footer class="SignFlowHomepage-footer">
