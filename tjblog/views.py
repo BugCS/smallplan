@@ -47,3 +47,11 @@ def download(request):
         :return:
     """
     return render_to_response("download.html")
+
+def sudoku(request):
+    """
+        小游戏-数独
+        :param request:
+        :return:
+    """
+    return render_to_response("sudoku.html")
