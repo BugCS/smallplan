@@ -32,6 +32,14 @@ def blog(request):
     """
     return render_to_response("blog.html")
 
+def blogDetail(request):
+    """
+        文章展示页
+        :param request:
+        :return:
+    """
+    return render_to_response("blogDetail.html")
+
 def Teammembers(request):
     """
         主创成员介绍
