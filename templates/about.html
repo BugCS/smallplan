@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>关于</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'assets/css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/download.css' %}">
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li ><a href="/api/index">首页</a></li>
+				<li ><a href="/api/blog">博客</a></li>
+				<li ><a href="/api/Teammembers">团队成员</a></li>
+                <li ><a href="#">论坛</a></li>
+				<li class="current_page_item"><a href="#">关于</a></li>
+				<li><a href="#">联系</a></li>
+				<li ><a href="#" >下载文档和脚本</a></li>
+			</ul>
+		</div>
+		<div id="logo">
+		<h1><a href="/api/index">BugCS</a></h1>
+		<p>by <a href="/api/Teammembers">主创团队记录</a></p>
+	</div>
+	</div>
+</div>
+	<!-- end #header -->
+
+</body>
+</html>
