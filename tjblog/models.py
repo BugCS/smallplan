@@ -1,12 +1,26 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
+from tjblog.managers import UserProfileManager
+
 import datetime
 # Create your models here.
 # coding: utf-8
 
+'''
+论坛相关表
+Article:文章表
+Comment:内容表
+Category:类别表
+UserProfile:用户表
+DocumentsScripts:文档脚本
+'''
 
 class Article(models.Model):
+    class Meta:
+        verbose_name = "文章信息"
+        db_table = 'article'
+
     # 文章标题可以重名，不同的用户id就可以分别
     title = models.CharField(max_length=255)
     # 简介可以为空
@@ -44,6 +58,10 @@ class Article(models.Model):
 
 
 class Comment(models.Model):
+    class Meta:
+        verbose_name = "内容信息"
+        db_table = 'comment'
+
     article = models.ForeignKey(Article, verbose_name=u"所属文章", on_delete=models.CASCADE)
     # 关联到同一张表的时候需要关联自己用self，当关联自己以后 想反向查找需要通过related_name来查，
     # 顶级评论不用包含父评论
@@ -70,6 +88,9 @@ class Comment(models.Model):
 
 
 class Category(models.Model):
+    class Meta:
+        verbose_name = "分类"
+        db_table = 'category'
     name = models.CharField(max_length=64, unique=True)
     brief = models.CharField(null=True, blank=True, max_length=255)
     # 一般页面的版块是固定死的，但是我们想动态生成版块的时候，我们需要定义一个位置字段和是否显示字段
@@ -87,12 +108,40 @@ class UserProfile(models.Model):
     """
     在用户表中定义一个friends 字段，关联自己
     """
+    class Meta:
+        verbose_name = "用户信息"
+        db_table = 'userprofile'
+
     user = models.OneToOneField(User, on_delete=models.CASCADE,)
     name = models.CharField(max_length=32)
     signature = models.CharField(max_length=255, blank=True, null=True)
     head_img = models.ImageField(height_field=150, width_field=150, blank=True, null=True)
-    # for web qq
+    # for phone email
+    iphone = models.CharField(max_length=32)
+    email = models.CharField(max_length=32)
+    active = models.CharField(max_length=255, blank=False, null=False)
     friends = models.ManyToManyField('self', related_name="my_friends", blank=True)
+    # 用户类型0管理员，1普通，2中级等
+    user_type = models.CharField(max_length=32)
+    object = UserProfileManager();
 
     def __str__(self):
         return self.name
+
+
+class DocumentsScripts(models.Model):
+    """
+        文档和脚本路径，提供下载
+    """
+    class Meta:
+        verbose_name = "文档脚本信息"
+        db_table = 'documentsscripts'
+
+    path = models.CharField(max_length=32)
+    # 默认1为文档，2为脚本
+    filecategory = models.CharField(max_length=32, blank=1)
+    author = models.ForeignKey("UserProfile", on_delete=models.CASCADE)
+    # 关联git路径
+    gitpath = models.CharField('git路径', max_length=32)
+    # 关联blog路径
+    blogpath = models.CharField('blog路径', max_length=32)

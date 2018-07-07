@@ -11,7 +11,6 @@
     text-align: center;
 }
 .fullslide input{
-    color: #fff;
     margin: auto;
     left: 0;
     width: 600px;
@@ -19,12 +18,15 @@
     height: 40px;
     top: 0;
     border-radius: 20px;
-    background: #e46115;
-    background-color: rgba(0,0,0,0.5);
+    background:#fff;
+    /*background-color: rgba(0,0,0,0.5);*/
 }
 .download{
-    margin-right: -20px;
+        margin-right: -20px;
     display: block;
+    background-color: #f2f2f2;
+    width: 100%;
+    position: absolute;
 }
 .download .layout{
     width: 544px;
@@ -33,6 +35,7 @@
     margin: 0 14px 0 0;
     *zoom: 1;
     *margin-top: 12px;
+    position: relative;
 }
 .layout .casedoc{
     height: 62px;
@@ -55,11 +58,11 @@ i {
 }
 .layout .casedoc span{
     font-size: 20px;
-    color: #daba0a;
+    color: #53aaa2;
     display: block;
     position: relative;
     z-index: 99;
-    background-color: #07040e;
+    background-color:#f2f2f2;
     width: 160px;
     text-align: center;
     margin: 0 auto;
@@ -67,7 +70,7 @@ i {
 }
 .layout .casedoc p{
    font-size: 14px;
-    color: #959595;
+    color: #c2bfbf;
     position: absolute;
     bottom: -33px;
     left: 0;
@@ -79,7 +82,7 @@ i {
     width: 540px;
     border-radius: 5px;
     height: 153px;
-    background-color: #4f391b;
+    background-color:#53aaa2;
     margin-bottom: 25px;
     border: 1px solid #e0e0e0;
 }
@@ -95,7 +98,7 @@ i {
     vertical-align: middle;
     line-height: 153px;
     text-align: center;
-    background-color: #e46115;
+    background-color: #ffffff;
     position: relative;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -166,7 +169,7 @@ i {
     position: absolute;
     top: 90px;
     right: 25px;
-    background-color: #4db870;
+    background-color: #1e9fff;
 }
 .searchbth{
     font-size: 13px;
@@ -181,6 +184,6 @@ i {
     background-image: linear-gradient(#fafafa, #eaeaea);
     background-repeat: repeat-x;
     border-radius: 3px;
-    height: 30px;
+    height: 40px;
     width:100px;
 }

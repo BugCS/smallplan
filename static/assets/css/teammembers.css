@@ -2,24 +2,21 @@
     margin:0;
     margin-top:20px;
     margin-bottom:20px;
+    background: rgba(0,0,0,.075);
 }
 .leftbar{
     width:10%;
     display: inline-grid;
-    color: #24ff04;
-    margin: auto;
-    margin-top: auto;
-    margin-top: auto;
-    border: 1px solid #fff;
+    color: #333;
     top: 0;
     left: 0;
     margin-top: 20px;
-    border: 1px solid #24ff04;
+    border: 2px solid #fff;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     float: left;
     min-height:300px;
-    background:#202224cc;
+    background:#9aede5;
 }
 .leftbar>ul{
     list-style: n;
@@ -45,13 +42,13 @@
     top:0;
     left:0;
     height: 300px;
-    background:#202224cc;
+    background:#9aede5;
     margin-top:20px;
     display: block;
     position: relative;
-    border: 1px solid #24ff04;
+    border: 10px solid #fff;
     border-bottom-right-radius: 20px;
-    color:#fff
+    color:#333;
 }
 .member>.headportrait{
     display: inline-block;

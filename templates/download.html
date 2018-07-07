@@ -8,6 +8,7 @@
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'assets/css/common.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/download.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
 </head>
 <body>
 <div id="header-wrapper">
@@ -15,17 +16,20 @@
 		<div id="menu">
 			<ul>
 				<li ><a href="/api/index">首页</a></li>
-				<li ><a href="/api/blog">博客</a></li>
 				<li ><a href="/api/Teammembers">团队成员</a></li>
-                <li ><a href="#">论坛</a></li>
-				<li><a href="#">关于</a></li>
-				<li><a href="#">联系</a></li>
-				<li class="current_page_item"><a href="#" >下载文档和脚本</a></li>
+				<li ><a href="/api/blog">博客</a></li>
+				<li><a href="#">论坛</a></li>
+				<li><a href="#">关于/联系</a></li>
+				<li class="current_page_item"><a href="/api/download">下载文档脚本</a></li>
 			</ul>
 		</div>
 		<div id="logo">
 		<h1><a href="/api/index">BugCS</a></h1>
-		<p>by <a href="/api/Teammembers">主创团队记录</a></p>
+		<p>by
+			<a href="/api/Teammembers">主创团队记录</a>
+			<a href="/api/login">登录</a>
+			<a href="/api/register">注册</a>
+		</p>
 	</div>
 	</div>
 </div>
@@ -42,7 +46,7 @@
             <span>文档下载</span>
             <p>用例模板，报告模板等</p>
         </h3>
-        <ul>
+        <ul style="list-style: none;">
             <li class="classli">
                 <div class="clearfix">
                 <span class="img-box">
@@ -82,7 +86,7 @@
                     其他文档
                 </span>
                 <div class="info">
-                    <ul>
+                    <ul style="list-style: none;">
                         <li class="childli"><a herf="#">jdk部署文档</a></li>
                         <li class="childli"><a herf="#">RF部署文档</a></li>
                         <li class="childli"><a herf="#">jmeter使用说明</a></li>
@@ -98,7 +102,7 @@
             <span>脚本下载</span>
             <p>python脚本，shell脚本等</p>
         </h3>
-         <ul>
+         <ul style="list-style: none;">
             <li class="classli">
                 <span class="img-box">
                     Moniter.py

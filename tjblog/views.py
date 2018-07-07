@@ -4,6 +4,7 @@ import os
 import logging
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render_to_response
+from tjblog.models import UserProfile
 # Create your views here.
 
 logger = logging.getLogger('smallplan')
@@ -22,7 +23,30 @@ def login(request):
         :param request:
         :return:
     """
-    return render_to_response("login.html")
+    if request.method == 'POST':
+        username = request.POST.get('account')
+        password = request.POST.get('password')
+
+        if UserProfile.objects.filter(username__exact=username).filter(password__exact=password).count() == 1:
+            logger.info('{username} 登录成功'.format(username=username))
+            request.session["login_status"] = True
+            request.session["now_account"] = username
+            return HttpResponseRedirect('/api/index/')
+        else:
+            logger.info('{username} 登录失败, 请检查用户名或者密码'.format(username=username))
+            request.session["login_status"] = False
+        return render_to_response("login.html")
+    elif request.method == 'GET':
+        return render_to_response("login.html")
+
+def register(request):
+    """
+        登录注册
+        :param request:
+        :return:
+    """
+
+    return render_to_response("register.html")
 
 def blog(request):
     """

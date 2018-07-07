@@ -7,6 +7,8 @@
     <title>登录注册</title>
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'assets/css/common.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'layui/css/layui.css' %}" type="text/css" media="all">
+
 </head>
 <body>
 <div id="header-wrapper">
@@ -14,11 +16,11 @@
 		<div id="menu">
 			<ul>
 				<li ><a href="/api/index">首页</a></li>
+                <li ><a href="/api/Teammembers">团队成员</a></li>
 				<li ><a href="/api/blog">博客</a></li>
-				<li><a href="#">关于</a></li>
-				<li><a href="#">联系</a></li>
-				<li><a href="#">下载用例模板</a></li>
-				<li><a href="#">下载脚本</a></li>
+                <li ><a href="/api/blog">论坛</a></li>
+				<li><a href="#">关于/联系</a></li>
+				<li><a href="/api/download">下载文档脚本</a></li>
 			</ul>
 		</div>
 		<!-- end #menu -->
@@ -38,97 +40,39 @@
 
 	</div>
 	<!-- end #header -->
-    <div class="form-w3ls">
-    <ul class="tab-group cl-effect-4">
-        <li class="tab active"><a href="#signin-agile">登录</a></li>
-		<li class="tab"><a href="#signup-agile">注册</a></li>
-    </ul>
-    <div class="tab-content">
-        <div id="signin-agile">
-			<form action="#" method="post">
-
-				<p class="header">User Name</p>
-				<input type="text" name="user" value="User Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
-
-				<p class="header">Password</p>
-				<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
-
-				<input type="checkbox" id="brand" value="">
-				<label for="brand"><span></span> Remember me?</label>
-
-				<input type="submit" class="sign-in" value="Sign In">
-
-			</form>
-		</div>
-		<div id="signup-agile">
-			<form action="#" method="post">
-
-				<p class="header">User Name</p>
-				<input type="text" name="user" value="Your Full Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Full Name';}">
-
-				<p class="header">Phone</p>
-				<input type="tel" name="phone" value="Your Phone Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Phone Number';}">
-
-				<p class="header">Email Address</p>
-				<input type="email" name="email" value="Email@address.com" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email@address.com';}">
-
-				<p class="header">Password</p>
-				<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
-
-				<p class="header">Confirm Password</p>
-				<input type="password" name="password" value="Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Confirm Password';}">
-
-				<input type="submit" class="register" value="Register">
-			</form>
-		</div>
-    </div><!-- tab-content -->
 </div>
+<div class="layui-container fly-marginTop" style="background: #fff;">
+    <div class="fly-panel fly-panel-user" pad20="">
+        <div class="layui-tab layui-tab-brief" lay-filter="user">
+            <ul class="layui-tab-title">
+                <li class="layui-this">登入</li>
+                <li><a href="/api/register/">注册</a></li>
+            </ul>
+            <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
+                <div class="layui-tab-item layui-show">
+                    <div class="layui-form layui-form-pane">
+                        <form method="post">
+                            <div class="layui-form-item">
+                                <label for="L_email" class="layui-form-label">邮箱</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="L_loginName" name="loginName" required="" lay-verify="required" autocomplete="off" class="layui-input layui-form-danger">
+                                </div>
+                               </div> <div class="layui-form-item"> <label for="L_pass" class="layui-form-label">密码</label>
+                            <div class="layui-input-inline"> <input type="password" id="L_pass" name="pass" required="" lay-verify="required" autocomplete="off" class="layui-input"> </div> </div> <div class="layui-form-item"> <label for="L_vercode" class="layui-form-label">人类验证</label> <div class="layui-input-inline"> <input type="text" id="L_vercode" name="vercode" required="" lay-verify="required" placeholder="请回答后面的问题" autocomplete="off" class="layui-input"> </div> <div class="layui-form-mid"> <span style="color: #c00;">Fly社区采用 Node.js 编写，yes or no？</span> </div> </div> <div class="layui-form-item"> <button class="layui-btn" lay-filter="*" lay-submit="">立即登录</button> <span style="padding-left:20px;"> <a href="/user/forget">忘记密码？</a> </span> </div> <div class="layui-form-item fly-form-app"> <span>或者使用社交账号登入</span> <a href="/app/qq" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" class="iconfont icon-qq" title="QQ登入"></a> <a href="/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})" class="iconfont icon-weibo" title="微博登入"></a>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<script type="text/javascript" src="/static/assets/js/jquery-1.11.0.min.js"></script>
+<div class="fly-footer">
+    <p> 2018 © <a href="#">xxx团队</a></p>
+</div>
+<script src="/static/layui/layui.js"></script>
 <script>
-    $('.form').find('input, textarea').on('keyup blur focus', function (e) {
 
-  var $this = $(this),
-      label = $this.prev('label');
-
-	  if (e.type === 'keyup') {
-			if ($this.val() === '') {
-          label.removeClass('active highlight');
-        } else {
-          label.addClass('active highlight');
-        }
-    } else if (e.type === 'blur') {
-    	if( $this.val() === '' ) {
-    		label.removeClass('active highlight');
-			} else {
-		    label.removeClass('highlight');
-			}
-    } else if (e.type === 'focus') {
-
-      if( $this.val() === '' ) {
-    		label.removeClass('highlight');
-			}
-      else if( $this.val() !== '' ) {
-		    label.addClass('highlight');
-			}
-    }
-
-});
-
-$('.tab a,.links a').on('click', function (e) {
-
-  e.preventDefault();
-
-  $(this).parent().addClass('active');
-  $(this).parent().siblings().removeClass('active');
-
-  target = $(this).attr('href');
-
-  $('.tab-content > div').not(target).hide();
-
-  $(target).fadeIn(600);
-
-});
 </script>
 </body>
 </html>

@@ -15,6 +15,7 @@ Released for free under a Creative Commons Attribution 2.5 License
     <meta name="description" content="" />
      {% load staticfiles %}
     <link href="{% static 'assets/css/blogHome.css' %}" rel="stylesheet" type="text/css" media="screen" />
+	<link rel="stylesheet" href="{% static 'assets/css/common.css' %}">
 </head>
 <body>
 <div id="header-wrapper">
@@ -22,30 +23,23 @@ Released for free under a Creative Commons Attribution 2.5 License
 		<div id="menu">
 			<ul>
 				<li ><a href="/api/index">首页</a></li>
-				<li class="current_page_item"><a href="#">博客</a></li>
-				<li><a href="/api/Teammembers">团队成员</a></li>
+				<li class="current_page_item"><a href="/api/Teammembers">团队成员</a></li>
+				<li ><a href="/api/blog">博客</a></li>
 				<li><a href="#">论坛</a></li>
-				<li><a href="#">关于</a></li>
-				<li><a href="#">联系</a></li>
+				<li><a href="#">关于/联系</a></li>
 				<li><a href="/api/download">下载文档脚本</a></li>
 			</ul>
 		</div>
-		<!-- end #menu -->
-		<!--<div id="search">
-			<form method="get" action="">
-				<fieldset>
-				<input type="text" name="s" id="search-text" size="15" />
-				<input type="submit" id="search-submit" value="Search" />
-				</fieldset>
-			</form>
-		</div>-->
-		<!-- end #search -->
 		<div id="logo">
 		<h1><a href="/api/index">BugCS</a></h1>
-		<p>by <a href="/api/Teammembers">主创团队记录</a></p>
+		<p>by
+			<a href="/api/Teammembers">主创团队记录</a>
+			<a href="/api/login">登录</a>
+			<a href="/api/register">注册</a>
+		</p>
 	</div>
-
 	</div>
+</div>
 	<!-- end #header -->
 </div>
 <!-- end #header-wrapper -->
