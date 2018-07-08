@@ -5,6 +5,7 @@ import logging
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render_to_response
 from tjblog.models import UserProfile
+from tjblog.common import Capture_img
 # Create your views here.
 
 logger = logging.getLogger('smallplan')
@@ -19,10 +20,11 @@ def index(request):
 
 def login(request):
     """
-        登录注册
+        登录
         :param request:
         :return:
     """
+
     if request.method == 'POST':
         username = request.POST.get('account')
         password = request.POST.get('password')
@@ -37,7 +39,14 @@ def login(request):
             request.session["login_status"] = False
         return render_to_response("login.html")
     elif request.method == 'GET':
-        return render_to_response("login.html")
+        # 获取验证码
+        Capture=Capture_img()
+        request.session["captureImg"]=Capture
+        Capture_info = {
+            'captureImg': Capture,
+            "pngPath" : "pic.png"
+        }
+        return render_to_response("login.html",Capture_info)
 
 def register(request):
     """
